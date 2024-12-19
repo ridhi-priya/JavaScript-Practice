@@ -19,6 +19,43 @@
 // // },1000)
 // // console.log("finish")
 
+// *******************coder dost ************************ //
+
+// code with finally():- finally runs after promise gets complete either resolve or reject 
+console.log("start")
+const p1=new Promise((resolve,reject) =>{
+    setTimeout(()=>{
+        // resolve("p1 executed")
+        reject("error")
+    },3000)
+})
+
+p1.then((res)=>{
+    console.log(res)
+}).catch((err)=>{
+    console.log(err, ": ok error catched")
+}).finally(()=>{
+    console.log("finally")
+})
+
+// code with two promises and promise.all()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// **********************Roadside coader******************************** //
+
 // // callback example
 
 
@@ -37,44 +74,48 @@
 
 //     // another ecapmle of callback with setTimeout
 
-// // console.log("start")
+// console.log("start")
 
-// // function importantAvction(userName,cb){
-// //     setTimeout(()=>{
-// //         cb(`suscribe to ${userName}`)
-// //     },4000)
-// // }
-// // function likeTheVideo(video,cb){
-// //     setTimeout(()=>{
-// //         cb(`like the ${video}`)
-// //     },1000)
-// // }
+// function importantAvction(userName,cb){
+//     setTimeout(()=>{
+//         cb(`suscribe to ${userName}`)
+//     },4000)
+// }
+// function likeTheVideo(video,cb){
+//     setTimeout(()=>{
+//         cb(`like the ${video}`)
+//     },1000)
+// }
 
-// // const message= importantAvction("RoadSide coder", function (message){
-// //     console.log(message)
-// // },)
+// const message= importantAvction("RoadSide coder", function (message){
+//     console.log(message)
+// },)
 
-// // likeTheVideo("Javascript interview video", (action)=>{
-// //     console.log(action)
-// // })
-// // console.log("stop")
+// likeTheVideo("Javascript interview video", (action)=>{
+//     console.log(action)
+// })
+// console.log("stop")
 
-// start promises
-console.log("start promises")
+// // start promises
+// console.log("start promises")
 
-const sub=new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-        const result=true
-        if(result) resolve("good you have success message")
-        else reject(new Error("bad you got an error"))
-    },1000)
-})
+// const sub=new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         const result=true
+//         if(result) resolve("good you have success message")
+//         else reject(new Error("bad you got an error"))
+//     },1000)
+// })
 
-console.log(sub)
-sub.then((res)=>{
-    console.log(res)
-}).catch((err)=>{
-    console.log(err)
-})
+// console.log(sub)
+// sub.then((res)=>{
+//     console.log(res)
+// }).catch((err)=>{
+//     console.log(err)
+// })
 
-console.log("finish promises")
+// console.log("finish promises")
+
+
+// implement same Promise in our previous example
+
