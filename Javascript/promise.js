@@ -1,8 +1,7 @@
 // // // promise in js
-// // // synchronous vs asynchronous code 
+// // // synchronous vs asynchronous code
 
 // // // javascript is single threated language:- it runs the synchronous code 1st then comes to asynchronous code
-
 
 // // // synchronous:- it runs the code line by line
 
@@ -12,7 +11,6 @@
 
 // // // asynchronous:- it runs the line by line but setTimeout will execuite after all line
 
-
 // // console.log("start")
 // // setTimeout(()=>{
 // //     console.log("applied asynchronous () code in js")
@@ -21,55 +19,42 @@
 
 // *******************coder dost ************************ //
 
-// code with finally():- finally runs after promise gets complete either resolve or reject 
-console.log("start")
-const p1=new Promise((resolve,reject) =>{
-    setTimeout(()=>{
-        // resolve("p1 executed")
-        reject("error")
-    },3000)
-})
+// code with finally():- finally runs after promise gets complete either resolve or reject
+console.log("start");
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // resolve("p1 executed")
+    reject("error");
+  }, 3000);
+});
 
-p1.then((res)=>{
-    console.log(res)
-}).catch((err)=>{
-    console.log(err, ": ok error catched")
-}).finally(()=>{
-    console.log("finally")
+p1.then((res) => {
+  console.log(res);
 })
+  .catch((err) => {
+    console.log(err, ": ok error catched");
+  })
+  .finally(() => {
+    console.log("finally");
+  });
 
 // code with two promises and promise.all()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // **********************Roadside coader******************************** //
 
 // // callback example
-
 
 // document.getElementById("demo").innerHTML = "hello";
 
 // function myDisplayer(some) {
 //     document.getElementById("demo").innerHTML = some;
 //     }
-    
+
 //     function myCalculator(num1, num2, myCallback) {
 //     let sum = num1 + num2;
 //     myCallback(sum);
 //     }
-    
+
 //     myCalculator(5, 5, myDisplayer);
 
 //     // another ecapmle of callback with setTimeout
@@ -116,6 +101,4 @@ p1.then((res)=>{
 
 // console.log("finish promises")
 
-
 // implement same Promise in our previous example
-
