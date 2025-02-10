@@ -1,3 +1,12 @@
+// Method	            Description	                                                 Use Case
+// Object Literal	    Easiest way to create objects	                             Best for static objects
+// new Object()	        Creates an empty object and assigns properties dynamically	 Rarely used, but useful for dynamic properties
+// Constructor Function	Uses new to create objects	                                 When needing reusable object blueprints
+// Class (ES6)	        Modern way of creating objects	                             Best for OOP-based projects
+// Object.create()	    Creates objects inheriting from a prototype	                 When prototype-based inheritance is needed
+// Object.assign()	    Copies properties between objects	                         Merging objects or cloning
+// Factory Function	    Returns a new object from a function	                     When you need object creation without new
+
 // 1.object literals
 
 // const obj = {
