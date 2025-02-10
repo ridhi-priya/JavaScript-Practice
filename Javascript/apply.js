@@ -10,11 +10,11 @@ let printDetails = function (state, country) {
   console.log(this.name + " " + state + " " + country);
 };
 // emp1.printName();
-printDetails.call(emp1, "jharkhand", "India");
+printDetails.call(emp1, "jharkhand", "India"); //
 let emp2 = {
   name: "deepak",
   age: 27,
   designation: "software dev",
 };
-printDetails.call(emp2, "jharkhand", "India");
+printDetails.call(emp2, ["jharkhand", "India"]);
 // printDetails.call(emp2);
