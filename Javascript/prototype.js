@@ -1,16 +1,36 @@
-// map with prototype
+// **********map with prototype**********
 
-Array.prototype.myMap = function (cb) {
-  newArr = [];
+// Array.prototype.myMap = function (cb) {
+//   let newArr = [];
+//   for (let i = 0; i < this.length; i++) {
+//     newArr.push(cb(this[i], i, this));
+//   }
+//   return newArr;
+// };
+
+// let arr = [1, 2, 3, 4, 5];
+// let arrMap = arr.myMap((i) => {
+//   return i * 2;
+// });
+// console.log(arrMap);
+// **********Filter with prototype**********
+
+Array.prototype.myFilter = function (cb) {
+  let newArr = [];
   for (let i = 0; i < this.length; i++) {
-    newArr.push(cb(this[i], i, this));
+    if (cb(this[i], i, this)) {
+      newArr.push(this[i]);
+    }
   }
   return newArr;
 };
 
-let arr = [1, 2, 3, 4, 5];
-let sqrArr = arr.myMap((i) => {
-  return i * 2;
+let arr = [1, 0, -2, 3, 4, 5];
+let arrFilter = arr.myFilter((i) => {
+  return i < 2;
 });
+console.log(arrFilter);
 
-console.log(sqrArr);
+// *****sorted the filterArr***********
+let sortArr = arrFilter.sort();
+console.log(sortArr);
