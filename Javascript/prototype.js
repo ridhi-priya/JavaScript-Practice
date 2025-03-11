@@ -15,22 +15,39 @@
 // console.log(arrMap);
 // **********Filter with prototype**********
 
-Array.prototype.myFilter = function (cb) {
-  let newArr = [];
+// Array.prototype.myFilter = function (cb) {
+//   let newArr = [];
+//   for (let i = 0; i < this.length; i++) {
+//     if (cb(this[i], i, this)) {
+//       newArr.push(this[i]);
+//     }
+//   }
+//   return newArr;
+// };
+
+// let arr = [1, 0, -2, 3, 4, 5];
+// let arrFilter = arr.myFilter((i) => {
+//   return i < 2;
+// });
+// console.log(arrFilter);
+
+// // *****sorted the filterArr***********
+// let sortArr = arrFilter.sort();
+// console.log(sortArr);
+
+// **********Reduce with prototype**********
+
+Array.prototype.myReduce = function (cb, initialval) {
+  var acc = initialval;
   for (let i = 0; i < this.length; i++) {
-    if (cb(this[i], i, this)) {
-      newArr.push(this[i]);
-    }
+    acc = acc ? cb(acc, this[i], i, this) : this[i];
   }
-  return newArr;
+  return acc;
 };
 
-let arr = [1, 0, -2, 3, 4, 5];
-let arrFilter = arr.myFilter((i) => {
-  return i < 2;
+let arr = [1, 2, 3, 4, 5];
+let reduceArr = arr.myReduce((acc, curr) => {
+  return acc + curr;
 });
-console.log(arrFilter);
-
-// *****sorted the filterArr***********
-let sortArr = arrFilter.sort();
-console.log(sortArr);
+console.log(arr);
+console.log(reduceArr);
