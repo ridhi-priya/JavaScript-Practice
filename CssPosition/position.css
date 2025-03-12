@@ -1,0 +1,27 @@
+.container{
+    border: 0.5rem solid black;
+    position: relative;
+    height: 2000px;
+}
+img{
+    height: 400px;
+    width: 250px;
+    margin: 10px;
+}
+.img2{
+    /* position: relative;
+    left: 100px;
+    top: 100px; */
+    /* position: absolute;
+    top: 200px; */
+}
+.img3{
+    position: fixed;
+}
+.img4{
+    position: sticky;
+    top: 100px;
+}
+.container2{
+    height:900px
+}
