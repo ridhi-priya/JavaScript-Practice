@@ -1,3 +1,13 @@
+let obj = {
+  name: "Ridhi",
+};
+
+function sayHello() {
+  console.log("Hello " + this.name);
+}
+console.log(sayHello.call(obj));
+// ******another example*****
+
 let emp1 = {
   name: "ridhi",
   age: 24,

@@ -1,3 +1,20 @@
+let obj = {
+  name: "Ridhi",
+};
+function sayHello(age, profession) {
+  return (
+    "Hello " +
+    this.name +
+    " age is " +
+    age +
+    " age " +
+    "profession is " +
+    profession
+  );
+}
+console.log(sayHello.apply(obj, [24, "SDE"]));
+
+// ******another example******
 let emp1 = {
   name: "ridhi",
   age: 24,
