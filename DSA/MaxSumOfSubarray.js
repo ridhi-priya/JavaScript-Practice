@@ -1,0 +1,19 @@
+// brute force approach
+// find maximum sum od subarray if subarray length is k
+function maxSumBruteForce(arr, k) {
+  let max = 0;
+  for (let i = 0; i <= arr.length - k; i++) {
+    let sum = 0;
+    for (let j = i; j < i + k; j++) {
+      sum += arr[j];
+    }
+    if (sum > max) {
+      max = sum;
+    }
+  }
+  return max;
+}
+
+let arr = [3, 8, 2, 5, 7, 6, 12];
+let k = 4;
+console.log(maxSumBruteForce(arr, k));
